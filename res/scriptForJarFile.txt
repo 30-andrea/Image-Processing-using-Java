@@ -1,0 +1,193 @@
+#Load image
+load random.png image
+
+#Create red component
+red-component image RedImage
+
+#Save red component
+save RedComponent.png RedImage
+
+#Create green component
+green-component image GreenImage
+
+#Save red component
+save GreenComponent.png GreenImage
+
+#Create blue component
+blue-component image BlueImage
+
+#Save red component
+save BlueComponent.png BlueImage
+
+#Create value component
+value-component image ValueImage
+
+#Save value component
+save ValueComponent.png ValueImage 
+
+#Create luma component
+luma-component image LumaImage
+
+
+#Save luma component
+save LumaComponent.png LumaImage
+
+#Create intensity component
+intensity-component image IntensityImage
+
+#Save intensity component
+save IntensityComponent.png IntensityImage
+
+#Flip image horizontally
+horizontal-flip image HorizontallyFlipped
+
+#Save horizontally flipped image
+save HorizontallyFlipped.png HorizontallyFlipped
+
+#Flip image vertically
+vertical-flip image VerticallyFlipped
+
+#Save vertically flipped image
+save VerticallyFlipped.png VerticallyFlipped
+
+#Brighten image
+brighten 50 image BrightenedImage
+
+#Save brightened image
+save Brightened.png BrightenedImage
+
+#Darken image
+brighten -50 image DarkenedImage
+
+#Save darkened image
+save Darkened.png DarkenedImage
+
+#RGB split image
+rgb-split image RedSplit GreenSplit BlueSplit
+
+#Save red split
+save RedSplit.png RedSplit
+
+#Save green split
+save GreenSplit.png GreenSplit
+
+#Save blue split
+save BlueSplit.png BlueSplit
+
+#Combine to form original image
+rgb-combine Combined RedSplit GreenSplit BlueSplit
+
+#Save combined image
+save Combined.png Combined
+
+#Blur image
+blur image BlurredImage
+
+#Save blurred image
+save BlurredImage.png BlurredImage
+
+#Sharpen image
+sharpen image SharpenedImage
+
+#Save blurred image
+save SharpenedImage.png SharpenedImage
+
+#Sepia tone image
+sepia image SepiaToned
+
+#save sepia toned image
+save SepiaToned.png SepiaToned
+
+#Greyscale image
+greyscale image Greyscale
+
+#save Greyscale image
+save Greyscale.png Greyscale
+
+#load an image
+load random.png png
+
+#compress an image
+compress 20 png pngCompressed20
+
+histogram pngCompressed20 pngCompressed20Histogram
+
+save pngCompressed20Histogram.png pngCompressed20Histogram
+
+save pngCompressed20.png pngCompressed20
+
+#compress an image
+compress 50 png pngCompressed50
+
+histogram pngCompressed50 pngCompressed50Histogram
+
+save pngCompressed50Histogram.png pngCompressed50Histogram
+
+save pngCompressed50.png pngCompressed50
+
+#create histogram of an image
+histogram png pngHistogram
+
+save pngHistogram.png pngHistogram
+
+#color correct an image
+color-correct png pngColorCorrected
+
+histogram pngColorCorrected pngColorCorrectedHistogram
+
+save pngColorCorrectedHistogram.png pngColorCorrectedHistogram
+
+save pngColorCorrected.png pngColorCorrected
+
+#perform level adjustment on an image
+levels-adjust 30 180 245 png pngLevelAdjusted1
+
+histogram pngLevelAdjusted1 pngLevelAdjusted1Histogram
+
+save pngLevelAdjusted1Histogram.png pngLevelAdjusted1Histogram
+
+save pngLevelAdjusted1.png pngLevelAdjusted1
+
+#perform level adjustment on an image
+levels-adjust 0 128 255 png pngLevelAdjusted2
+
+histogram pngLevelAdjusted2 pngLevelAdjusted2Histogram
+
+save pngLevelAdjusted2Histogram.png pngLevelAdjusted2Histogram
+
+save pngLevelAdjusted2.png pngLevelAdjusted2
+
+
+#split the image and blur a part
+blur png pngSplitBlur split 40
+
+save pngSplitBlur.png pngSplitBlur
+
+#split the image and sharpen a part
+sharpen png pngSplitSharpen split 40
+
+save pngSplitSharpen.png pngSplitSharpen
+
+#split the image and apply sepia filter to a part
+sepia png pngSplitSepia split 50
+
+save pngSplitSepia.png pngSplitSepia
+
+#split the image and apply greyscale filter to a part
+greyscale png pngSplitGreyscale split 50
+
+save pngSplitGreyscale.png pngSplitGreyscale
+
+#split the image and perform color correction on a part
+color-correct png pngSplitColorCorrect split 50
+
+save pngSplitColorCorrect.png pngSplitColorCorrect
+
+#split the image and perform level adjustment on a part
+levels-adjust 30 180 245 png pngSplitLevelAdjustment split 45
+
+save pngSplitLevelAdjustment.png pngSplitLevelAdjustment
+
+exit
+
+

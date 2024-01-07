@@ -1,0 +1,193 @@
+#Load image
+load res/random.png image
+
+#Create red component
+red-component image RedImage
+
+#Save red component
+save res/RedComponent.png RedImage
+
+#Create green component
+green-component image GreenImage
+
+#Save red component
+save res/GreenComponent.png GreenImage
+
+#Create blue component
+blue-component image BlueImage
+
+#Save red component
+save res/BlueComponent.png BlueImage
+
+#Create value component
+value-component image ValueImage
+
+#Save value component
+save res/ValueComponent.png ValueImage 
+
+#Create luma component
+luma-component image LumaImage
+
+
+#Save luma component
+save res/LumaComponent.png LumaImage
+
+#Create intensity component
+intensity-component image IntensityImage
+
+#Save intensity component
+save res/IntensityComponent.png IntensityImage
+
+#Flip image horizontally
+horizontal-flip image HorizontallyFlipped
+
+#Save horizontally flipped image
+save res/HorizontallyFlipped.png HorizontallyFlipped
+
+#Flip image vertically
+vertical-flip image VerticallyFlipped
+
+#Save vertically flipped image
+save res/VerticallyFlipped.png VerticallyFlipped
+
+#Brighten image
+brighten 50 image BrightenedImage
+
+#Save brightened image
+save res/Brightened.png BrightenedImage
+
+#Darken image
+brighten -50 image DarkenedImage
+
+#Save darkened image
+save res/Darkened.png DarkenedImage
+
+#RGB split image
+rgb-split image RedSplit GreenSplit BlueSplit
+
+#Save red split
+save res/RedSplit.png RedSplit
+
+#Save green split
+save res/GreenSplit.png GreenSplit
+
+#Save blue split
+save res/BlueSplit.png BlueSplit
+
+#Combine to form original image
+rgb-combine Combined RedSplit GreenSplit BlueSplit
+
+#Save combined image
+save res/Combined.png Combined
+
+#Blur image
+blur image BlurredImage
+
+#Save blurred image
+save res/BlurredImage.png BlurredImage
+
+#Sharpen image
+sharpen image SharpenedImage
+
+#Save blurred image
+save res/SharpenedImage.png SharpenedImage
+
+#Sepia tone image
+sepia image SepiaToned
+
+#save sepia toned image
+save res/SepiaToned.png SepiaToned
+
+#Greyscale image
+greyscale image Greyscale
+
+#save Greyscale image
+save res/Greyscale.png Greyscale
+
+#load an image
+load res/random.png png
+
+#compress an image
+compress 20 png pngCompressed20
+
+histogram pngCompressed20 pngCompressed20Histogram
+
+save res/pngCompressed20Histogram.png pngCompressed20Histogram
+
+save res/pngCompressed20.png pngCompressed20
+
+#compress an image
+compress 50 png pngCompressed50
+
+histogram pngCompressed50 pngCompressed50Histogram
+
+save res/pngCompressed50Histogram.png pngCompressed50Histogram
+
+save res/pngCompressed50.png pngCompressed50
+
+#create histogram of an image
+histogram png pngHistogram
+
+save res/pngHistogram.png pngHistogram
+
+#color correct an image
+color-correct png pngColorCorrected
+
+histogram pngColorCorrected pngColorCorrectedHistogram
+
+save res/pngColorCorrectedHistogram.png pngColorCorrectedHistogram
+
+save res/pngColorCorrected.png pngColorCorrected
+
+#perform level adjustment on an image
+levels-adjust 30 180 245 png pngLevelAdjusted1
+
+histogram pngLevelAdjusted1 pngLevelAdjusted1Histogram
+
+save res/pngLevelAdjusted1Histogram.png pngLevelAdjusted1Histogram
+
+save res/pngLevelAdjusted1.png pngLevelAdjusted1
+
+#perform level adjustment on an image
+levels-adjust 0 128 255 png pngLevelAdjusted2
+
+histogram pngLevelAdjusted2 pngLevelAdjusted2Histogram
+
+save res/pngLevelAdjusted2Histogram.png pngLevelAdjusted2Histogram
+
+save res/pngLevelAdjusted2.png pngLevelAdjusted2
+
+
+#split the image and blur a part
+blur png pngSplitBlur split 40
+
+save res/pngSplitBlur.png pngSplitBlur
+
+#split the image and sharpen a part
+sharpen png pngSplitSharpen split 40
+
+save res/pngSplitSharpen.png pngSplitSharpen
+
+#split the image and apply sepia filter to a part
+sepia png pngSplitSepia split 50
+
+save res/pngSplitSepia.png pngSplitSepia
+
+#split the image and apply greyscale filter to a part
+greyscale png pngSplitGreyscale split 50
+
+save res/pngSplitGreyscale.png pngSplitGreyscale
+
+#split the image and perform color correction on a part
+color-correct png pngSplitColorCorrect split 50
+
+save res/pngSplitColorCorrect.png pngSplitColorCorrect
+
+#split the image and perform level adjustment on a part
+levels-adjust 30 180 245 png pngSplitLevelAdjustment split 45
+
+save res/pngSplitLevelAdjustment.png pngSplitLevelAdjustment
+
+exit
+
+

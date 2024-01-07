@@ -1,0 +1,5 @@
+load res/random.png img
+
+sharpen img sharpenedImg
+
+exit
