@@ -1,0 +1,85 @@
+#load an image
+load res/random.png png
+
+#compress an image
+compress 20 png pngCompressed20
+
+histogram pngCompressed20 pngCompressed20Histogram
+
+save res/pngCompressed20Histogram.png pngCompressed20Histogram
+
+save res/pngCompressed20.png pngCompressed20
+
+#compress an image
+compress 50 png pngCompressed50
+
+histogram pngCompressed50 pngCompressed50Histogram
+
+save res/pngCompressed50Histogram.png pngCompressed50Histogram
+
+save res/pngCompressed50.png pngCompressed50
+
+#create histogram of an image
+histogram png pngHistogram
+
+save res/pngHistogram.png pngHistogram
+
+#color correct an image
+color-correct png pngColorCorrected
+
+histogram pngColorCorrected pngColorCorrectedHistogram
+
+save res/pngColorCorrectedHistogram.png pngColorCorrectedHistogram
+
+save res/pngColorCorrected.png pngColorCorrected
+
+#perform level adjustment on an image
+levels-adjust 30 180 245 png pngLevelAdjusted1
+
+histogram pngLevelAdjusted1 pngLevelAdjusted1Histogram
+
+save res/pngLevelAdjusted1Histogram.png pngLevelAdjusted1Histogram
+
+save res/pngLevelAdjusted1.png pngLevelAdjusted1
+
+#perform level adjustment on an image
+levels-adjust 0 128 255 png pngLevelAdjusted2
+
+histogram pngLevelAdjusted2 pngLevelAdjusted2Histogram
+
+save res/pngLevelAdjusted2Histogram.png pngLevelAdjusted2Histogram
+
+save res/pngLevelAdjusted2.png pngLevelAdjusted2
+
+
+#split the image and blur a part
+blur png pngSplitBlur split 40
+
+save res/pngSplitBlur.png pngSplitBlur
+
+#split the image and sharpen a part
+sharpen png pngSplitSharpen split 40
+
+save res/pngSplitSharpen.png pngSplitSharpen
+
+#split the image and apply sepia filter to a part
+sepia png pngSplitSepia split 50
+
+save res/pngSplitSepia.png pngSplitSepia
+
+#split the image and apply greyscale filter to a part
+greyscale png pngSplitGreyscale split 50
+
+save res/pngSplitGreyscale.png pngSplitGreyscale
+
+#split the image and perform color correction on a part
+color-correct png pngSplitColorCorrect split 50
+
+save res/pngSplitColorCorrect.png pngSplitColorCorrect
+
+#split the image and perform level adjustment on a part
+levels-adjust 30 180 245 png pngSplitLevelAdjustment split 45
+
+save res/pngSplitLevelAdjustment.png pngSplitLevelAdjustment
+
+exit
